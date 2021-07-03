@@ -15,7 +15,7 @@ const FeedbackSection = ({
   bad,
 }) => (
   <Section title="Please, leave your feedback here:">
-    <FeedbackOptions increaseValue={increaseValue} />
+    <FeedbackOptions increaseValue={increaseValue} options={['good', 'neutral', 'bad']} />
     <h2 className={styles.subtitle}>Statistics</h2>
     {countTotalFeedback() === 0 ? (
       <Notification message="No feedback given"></Notification>

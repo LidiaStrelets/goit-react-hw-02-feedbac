@@ -2,17 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ increaseValue }) => (
+const FeedbackOptions = ({ increaseValue, options }) => (
   <div className={styles.btnWrapper}>
-    <button className={styles.btn} type="button" onClick={() => increaseValue('good')}>
-      Good
-    </button>
-    <button className={styles.btn} type="button" onClick={() => increaseValue('neutral')}>
-      Neutral
-    </button>
-    <button className={styles.btn} type="button" onClick={() => increaseValue('bad')}>
-      Bad
-    </button>
+    {options.map((option, index) => (
+      <button
+        key={index}
+        className={styles.btn}
+        type="button"
+        onClick={() => increaseValue(option)}
+      >
+        {option}
+      </button>
+    ))}
   </div>
 );
 
