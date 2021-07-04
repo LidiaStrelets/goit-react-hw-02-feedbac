@@ -8,7 +8,7 @@ Notification.defaultProps = {
   message: 'Oops, something went wrong here :(',
 };
 
-Notification.prototype = {
+Notification.propTypes = {
   message: PropTypes.string,
 };
 
