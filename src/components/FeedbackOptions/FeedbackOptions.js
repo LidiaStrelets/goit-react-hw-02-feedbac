@@ -17,7 +17,7 @@ const FeedbackOptions = ({ increaseValue, options }) => (
   </div>
 );
 
-FeedbackOptions.prototype = {
+FeedbackOptions.propTypes = {
   increaseValue: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
