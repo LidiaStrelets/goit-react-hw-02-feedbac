@@ -19,6 +19,7 @@ const FeedbackOptions = ({ increaseValue, options }) => (
 
 FeedbackOptions.prototype = {
   increaseValue: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default FeedbackOptions;
