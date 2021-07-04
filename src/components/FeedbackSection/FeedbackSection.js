@@ -32,7 +32,7 @@ const FeedbackSection = ({
   </Section>
 );
 
-FeedbackSection.prototype = {
+FeedbackSection.propTypes = {
   increaseValue: PropTypes.func.isRequired,
   countTotalFeedback: PropTypes.func.isRequired,
   countPositiveFeedbackPercentage: PropTypes.func.isRequired,
